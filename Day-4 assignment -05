@@ -1,0 +1,57 @@
+5. You are managing a sales department for your company, you want to reward your employees based on
+the sales made by them during the year.
+The criteria is as follows:
+1. Sales from 0-5000 : 2%
+2. Sales from 5001 - 10000 : 5%
+3. Sales from 10001 - 20000 : 7%
+4. Above 20000 - 10%
+Then log the total commission earned by him.
+
+HTML code :
+
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset=utf-8 />
+<title> calculator </title>
+<style type="text/css">
+body {margin: 30px;}
+</style> 
+</head>
+<body>
+<form>
+Enter your sales amount :<input type="text" id="Amount" /><br>
+<input type="button" onClick="salescal()" Value="sales" />
+</form>
+<p>total commission is: <br>
+<span id = "commission "></span>
+</p>
+</body>
+</html>
+
+JS code :
+
+function salescal()
+{
+        Amount = document.getElementById("Amount").value;
+        if (Amount>0 && Amount < 5000)
+        {
+         document.getElementById("commission").innerHTML = Amount*(2/100);     
+          console.log("your commission is 2%", +commission);
+        }
+        if (Amount>5001 && Amount < 10000)
+        {
+        document.getElementById("commission").innerHTML = Amount*(5/100); 
+     console.log("your commission is 5%");
+        }
+        if (Amount>100001 && Amount < 20000)
+        {
+        document.getElementById("commission").innerHTML = Amount*(7/100);     
+            console.log("your commission is 7%");
+        }
+        if (Amount>20000)
+        {
+        document.getElementById("commission").innerHTML = Amount*(10/100); 
+          console.log("your commission is 10%");
+         }
+  }
