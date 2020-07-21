@@ -1,0 +1,75 @@
+Write a program which does the following things:
+1. Takes a positive number from the user.
+2. Makes an array of numbers till the number given by user
+3. Use higher order function to filter the odd numbers
+4. Generate and array of the cubes of the filtered numbers
+ Let num; 
+num = prompt("Enter a number");
+
+
+
+Create a Class User with properties as name, age & email.
+He can login and logout
+Create another class Moderator which has all the features of User, plus additional functionality to Add
+coins and remove coins.
+Create one more class Admin which has all the features of Moderator plus additional features like add a
+Course and delete a particular course for a user.
+Class User   
+{
+    constructor(name,age,email)
+    {
+    this.name=name;
+    this.age=age;
+    this.email=email;
+    this.lucoins=lucoins;
+    }
+    login()
+    {
+    console.log('${this.name} has logged in'); 
+    return this; 
+    }
+    logout()
+    {
+    console.log('${this.name} has logged in'); 
+    return this; 
+    }
+    
+ }
+class Moderator extends User
+{
+    deleteUser(user)
+    {
+    user=user.filter(u=>{
+    return u.email!=user.email; 
+    },1000)
+    }
+    addCoins()
+    {
+    this.luCoins++;
+    console.log('${this.name} has ${this.   luCoins} coins '); 
+    }
+}
+class Admin extends Moderator
+{
+    addCourse(user,course)
+    {
+    user.course.push(course);
+    console.log(user);
+    } 
+ } 
+Let user=[user1, user2, moderator, admin];
+Let user1=new User('Dilip', 25,'dilip@gmail.com');
+Let user2=new User('Vamc', 18, 'vamc@gmail.com');
+user1.login().addcoins().logout();
+Let moderator=new Moderator('Alexander', 34, 'alexander@gmail.com');
+moderator. addCoins()
+moderator.deleteUser(user2);
+Let admin=new Admin('Rio', 25, 'rio@gmail.com');
+admin.addcourse(user1,'javascript'); 
+admin.addcourse(user1,'python'); 
+
+
+Using promises/async await/fetch get the random todos from the json placeholder api. And log all the
+completed todos to the console.
+API Endpoint : https://jsonplaceholder.typicode.com/todos
+
