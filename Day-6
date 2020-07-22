@@ -1,0 +1,83 @@
+Question 1:
+Write a program that will iterate over an array of colors and change the background of the page
+after 5 seconds.
+
+<html>
+<head>
+    <script type="text/javascript">
+  var c = ["blue", "black", "yellow", "red"];
+
+  function changeColor() {
+    setTimeout(function loop() {
+      document.bgColor = c.shift();
+      if (c.length) {
+        setTimeout(loop, 5000);
+      }
+    }, 5000);
+  }
+
+  function start() {
+    setInterval(changeColor(), 20000);
+  }
+</script>
+
+<body onload="start()">
+</body>
+<html>
+
+Question 2:
+Write a program that will display the multiplication table of a number on the webpage in a proper
+format. Take the input from the user.
+Input - 5
+Output - 5 x 1 = 5
+ 5 x 2 = 10
+ and so on…
+<html>
+<head>
+<style>
+body {
+background: #F4F4F4;
+font-family: Arial;
+margin: 0;
+}
+</style>
+</head>
+<body>
+<table border="0" style="margin: 0 auto; width:500px">
+    <tr>
+        <td colspan="2"><h2>Print Multiplication Table using JavaScript</h2></td>
+    </tr>
+ 
+    <tr>
+        <td width="28%">Enter a Number : </td>
+        <td><input type="number" onchange="printTable(this)"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><span id="mul"></span></td>
+    </tr>
+</table>
+ 
+<script>
+function printTable(num) {
+    var input = num.value;
+    if(!isNaN(input)) {
+        var table="";
+        var number="";
+        for(i=1;i<=10;i++) {
+            number = input * i;
+            table +=  input + " * " + i + " = " + number + "<br/>";
+        }
+        document.getElementById("mul").innerHTML = table;
+    }
+    else {
+        document.getElementById("mul").innerHTML = "Please Enter a valid Number";
+    }
+}
+</script>
+</body>
+</html>       
+
+Question 3:
+Make a webpage that will ask the name of the user. Then will display a welcome message on the
+webpage. Also the webpage should also have a clock.
+Using the toggle method of classList add a dark mode feature to the website.
